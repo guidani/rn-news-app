@@ -14,15 +14,20 @@ import { API_KEY, API_URL } from "../../config";
 function Home() {
   const [articles, setArticles] = useState([]);
 
-  const getNews = async (query) => {
+  const getNews = async () => {
     axios
-      .get(`${API_URL}q=${query}&apiKey=${API_KEY}`)
+      .get(`${API_URL}country=br&apiKey=${API_KEY}`, {
+        params: {
+          category: "technology",
+          country: "br",
+        },
+      })
       .then((response) => setArticles(response.data.articles))
       .catch((error) => console.log(error));
   };
 
   useEffect(() => {
-    getNews("bitcoin");
+    getNews();
   }, [articles]);
 
   return (

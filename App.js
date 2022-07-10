@@ -2,7 +2,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { StyleSheet } from "react-native";
 import Home from "./screens/Home";
-import Search from "./screens/Search";
+import SearchPage from "./screens/Search";
 
 import { Feather } from "@expo/vector-icons";
 
@@ -34,7 +34,7 @@ export default function App() {
         />
         <Tab.Screen
           name="Search"
-          component={Search}
+          component={SearchPage}
           options={{
             tabBarIcon: () => <Feather name="search" size={24} color="black" />,
           }}
