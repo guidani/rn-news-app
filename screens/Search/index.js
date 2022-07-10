@@ -25,6 +25,7 @@ const SearchPage = () => {
     <View style={styles.container}>
       <SearchBar
         value={searchText}
+        // TODO: função não está funcionando
         onChange={() => setSearchText()}
         onSubmit={searchArticles}
       />
