@@ -90,9 +90,6 @@ const styles = StyleSheet.create({
   texto: {
     color: "red",
   },
-  container: {
-    // marginTop: 10,
-  },
 });
 
 export default Home;

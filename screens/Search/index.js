@@ -1,12 +1,21 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React, { useState } from "react";
+import { StyleSheet, View } from "react-native";
+import { SearchBar } from "react-native-screens";
 
 const Search = () => {
-  return (
-    <View>
-      <Text>Search</Text>
-    </View>
-  )
-}
+  const [searchText, setSearchText] = useState("");
 
-export default Search
+  return (
+    <View style={styles.container}>
+      <SearchBar searchText={searchText} setSearchText={setSearchText} />
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
+
+export default Search;
