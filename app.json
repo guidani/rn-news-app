@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "newsApp",
-    "slug": "newsApp",
+    "name": "BITNews",
+    "slug": "BITNews",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
