@@ -1,9 +1,16 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import * as WebBrowser from "expo-web-browser";
+import { Image, Pressable, StyleSheet, Text, View } from "react-native";
+
 function Article(props) {
   let date = props.publishedAt;
   let formatedDate = date.split("T")[0]?.split("-").reverse().join("/");
+
+  const goToSource = () => {
+    WebBrowser.openBrowserAsync(props.url);
+  };
+
   return (
-    <View style={styles.container}>
+    <Pressable style={styles.container} onPress={goToSource}>
       <Image
         source={{
           uri: props.urlToImage,
@@ -22,7 +29,7 @@ function Article(props) {
           </Text>
         </View>
       </View>
-    </View>
+    </Pressable>
   );
 }
 

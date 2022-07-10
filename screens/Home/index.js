@@ -16,7 +16,7 @@ function Home() {
 
   const getNews = async () => {
     axios
-      .get(`${API_URL}country=br&apiKey=${API_KEY}`, {
+      .get(`${API_URL}&apiKey=${API_KEY}`, {
         params: {
           category: "technology",
           country: "br",
@@ -28,7 +28,7 @@ function Home() {
 
   useEffect(() => {
     getNews();
-  }, [articles]);
+  }, []);
 
   return (
     <View style={styles.container}>
